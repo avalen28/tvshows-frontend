@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 class ShowService {
   constructor() {
@@ -9,10 +9,19 @@ class ShowService {
 
   // Iteration 2: use this method
   getShows() {
-    return this.api.get('/').then(({ data }) => data).catch(err => console.error(err));
+    return this.api
+      .get("/")
+      .then(({ data }) => data)
+      .catch((err) => console.error(err));
   }
 
   // Iteration 3: create method
+  getShow(showId) {
+    return this.api
+      .get(`/${showId}`)
+      .then(({ data }) => data)
+      .catch((err) => console.error(err));
+  }
 
   // Iteration 4: create method
 
