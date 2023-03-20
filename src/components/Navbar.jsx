@@ -7,7 +7,7 @@ export default function Navbar() {
     <div>
       <NavLink to={"/"}>Home</NavLink>
       <NavLink to={"/new"}>New Show </NavLink>
-      <NavLink to={navigate(-1)}> Go Back </NavLink>
+      <NavLink to={() => navigate(-1)}> Go Back </NavLink>
     </div>
   );
 }

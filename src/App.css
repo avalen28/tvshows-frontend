@@ -1,3 +1,35 @@
 .active {
   color: green;
 }
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.show-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.show-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+.show-img {
+  object-fit: contain;
+  width: 50%;
+  height: 70%;
+}
+.show-title-link {
+  text-decoration: none;
+}

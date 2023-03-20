@@ -1,25 +1,25 @@
 import React, { useState, useEffect } from "react";
 import showService from "../services/showService";
-import { Link } from "react-router-dom";
+import Card from "../components/Card";
 
 export default function Home() {
-  const getData = async () => {
+  const [shows, setShows] = useState([]);
+  const getShowsFromAPI = async () => {
     try {
-      const response = await showService.getShows();
-      console.log(response);
+      const showsFromAPI = await showService.getShows();
+      setShows(showsFromAPI);
     } catch (error) {
       console.error(error);
     }
   };
-
   useEffect(() => {
-    getData();
+    getShowsFromAPI();
   }, []);
 
   return (
     <div>
       <h2>Home</h2>
-      {/* ITERATION 2: Should display a list of all the shows */}
+      <Card shows={shows} />
     </div>
   );
 }
