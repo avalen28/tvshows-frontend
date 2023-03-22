@@ -24,10 +24,17 @@ class ShowService {
   }
 
   getDeleteShow(showId) {
-    return this.api.delete(`/${showId}`);
+    return this.api.delete(`/${showId}`).catch((error) => console.log(error));
   }
 
   // Iteration 4: create method
+
+  createNewShow(newShow) {
+    return this.api
+      .post("/", newShow)
+      .then(({ data }) => data)
+      .catch((error) => console.error(error));
+  }
 
   // Iteration 5: create method
 }
