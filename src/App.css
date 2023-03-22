@@ -33,3 +33,16 @@
 .show-title-link {
   color: black;
 }
+.finish {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.finish img {
+  width: 50%;
+}
+.finish p {
+  width: 70%;
+  margin-top: 20px;
+}

@@ -24,7 +24,7 @@ class ShowService {
   }
 
   getDeleteShow(showId) {
-    return this.api.delete(`/${showId}`).catch((error) => console.log(error));
+    return this.api.delete(`/${showId}`).catch((error) => console.error(error));
   }
 
   // Iteration 4: create method
@@ -37,6 +37,11 @@ class ShowService {
   }
 
   // Iteration 5: create method
+  updateShow(showUpdatedId, body) {
+    return this.api
+      .put(`/${showUpdatedId}`, body)
+      .catch((error) => console.error(error));
+  }
 }
 
 const showService = new ShowService();

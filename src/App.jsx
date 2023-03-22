@@ -5,6 +5,7 @@ import Show from "./views/Show";
 import Edit from "./views/Edit";
 import New from "./views/New";
 import Navbar from "./components/Navbar";
+import Misterious from "./components/Misterious";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/new" element={<New />} />
         <Route path="/shows/:id" element={<Show />} />
         <Route path="/edit/:id" element={<Edit />} />
+        <Route path="/misterious" element={<Misterious />} />
       </Routes>
     </div>
   );

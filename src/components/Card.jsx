@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Card({ shows }) {
-  console.log(shows);
   return (
     <div className="show-container">
       {shows.map((elem) => {
