@@ -23,6 +23,10 @@ class ShowService {
       .catch((err) => console.error(err));
   }
 
+  getDeleteShow(showId) {
+    return this.api.delete(`/${showId}`);
+  }
+
   // Iteration 4: create method
 
   // Iteration 5: create method
